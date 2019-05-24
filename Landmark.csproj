@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ACC39F53-E4C2-4CAB-8D14-7AF6DF7EFDBC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Landmark.HmlrBg.ConnectedServices</RootNamespace>
+    <AssemblyName>Landmark.HmlrBg.ConnectedServices</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\EDRSAttachmentPoll\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EDRSAttachment\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EDRSEarlyCompletionPoll\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EDRSRequisitionPoll\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EDRSSubmitPoll\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EDRSSubmit\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\LocalLandCharges\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\OfficialCopyTitleKnownPoll\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\OfficialCopyTitleKnown\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\OutstandingRequests\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\OwnershipVerification\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\RegisterExtractPoll\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\RegisterExtract\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EDRSAttachmentPoll\AttachmentV2_1PollRequestWebService.wsdl" />
+    <None Include="Connected Services\EDRSAttachmentPoll\Landmark.HmlrBg.ConnectedServices.EDRSAttachmentPoll.AttachmentResponseV2_0Type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EDRSAttachmentPoll\Landmark.HmlrBg.ConnectedServices.EDRSAttachmentPoll.getResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EDRSAttachmentPoll\PollRequest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EDRSAttachmentPoll\ResponseAttachmentV2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EDRSAttachment\AttachmentV2_1WebService.wsdl" />
+    <None Include="Connected Services\EDRSAttachment\Landmark.HmlrBg.ConnectedServices.EDRSAttachment.AttachmentResponseV2_0Type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EDRSAttachment\Landmark.HmlrBg.ConnectedServices.EDRSAttachment.newAttachmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EDRSAttachment\RequestAttachmentV2_1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EDRSAttachment\ResponseAttachmentV2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EDRSEarlyCompletionPoll\EarlyCompletionV2_1PollRequestWebService.wsdl" />
+    <None Include="Connected Services\EDRSEarlyCompletionPoll\EarlyCompletionV2_1PollRequestWebService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EDRSEarlyCompletionPoll\EarlyCompletionV2_1PollRequestWebService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EDRSEarlyCompletionPoll\Landmark.HmlrBg.ConnectedServices.EDRSEarlyCompletionPoll.getResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EDRSEarlyCompletionPoll\Landmark.HmlrBg.ConnectedServices.EDRSEarlyCompletionPoll.ResponseEarlyCompletionV2_0Type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EDRSRequisitionPoll\CorrespondenceV2_1PollRequestWebService.wsdl" />
+    <None Include="Connected Services\EDRSRequisitionPoll\CorrespondenceV2_1PollRequestWebService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EDRSRequisitionPoll\CorrespondenceV2_1PollRequestWebService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EDRSRequisitionPoll\Landmark.HmlrBg.ConnectedServices.EDRSRequisitionPoll.CorrespondenceV1_0Type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EDRSRequisitionPoll\Landmark.HmlrBg.ConnectedServices.EDRSRequisitionPoll.getResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EDRSSubmitPoll\EDocumentRegistrationV2_1PollRequestWebService.wsdl" />
+    <None Include="Connected Services\EDRSSubmitPoll\Landmark.HmlrBg.ConnectedServices.EDRSSubmitPoll.getResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EDRSSubmitPoll\Landmark.HmlrBg.ConnectedServices.EDRSSubmitPoll.ResponseApplicationToChangeRegisterV2_0Type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EDRSSubmitPoll\PollRequest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EDRSSubmitPoll\ResponseApplicationToChangeRegisterV2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EDRSSubmit\EDocumentRegistrationV2_1WebService.wsdl" />
+    <None Include="Connected Services\EDRSSubmit\Landmark.HmlrBg.ConnectedServices.EDRSSubmit.eDocumentRegistrationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EDRSSubmit\Landmark.HmlrBg.ConnectedServices.EDRSSubmit.ResponseApplicationToChangeRegisterV2_0Type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EDRSSubmit\RequestApplicationToChangeRegisterV2_1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EDRSSubmit\ResponseApplicationToChangeRegisterV2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LocalLandCharges\Landmark.HmlrBg.ConnectedServices.LocalLandCharges.getResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LocalLandCharges\Landmark.HmlrBg.ConnectedServices.LocalLandCharges.LLCSearchResponseV1_0Type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LocalLandCharges\Landmark.HmlrBg.ConnectedServices.LocalLandCharges.performSearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LocalLandCharges\LLCSearchRequestV1_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LocalLandCharges\LLCSearchResponseV1_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LocalLandCharges\LLCSearchV1_0WebService.wsdl" />
+    <None Include="Connected Services\LocalLandCharges\PollRequest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OfficialCopyTitleKnownPoll\Landmark.HmlrBg.ConnectedServices.OfficialCopyTitleKnownPoll.getResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OfficialCopyTitleKnownPoll\Landmark.HmlrBg.ConnectedServices.OfficialCopyTitleKnownPoll.ResponseTitleKnownOfficialCopyV2_0Type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OfficialCopyTitleKnownPoll\OC1TitleKnownV2_0PollRequestWebService.wsdl" />
+    <None Include="Connected Services\OfficialCopyTitleKnownPoll\PollRequest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OfficialCopyTitleKnownPoll\ResponseTitleKnownOfficialCopyV2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OfficialCopyTitleKnown\Landmark.HmlrBg.ConnectedServices.OfficialCopyTitleKnown.performTitleKnownSearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OfficialCopyTitleKnown\Landmark.HmlrBg.ConnectedServices.OfficialCopyTitleKnown.ResponseTitleKnownOfficialCopyV2_0Type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OfficialCopyTitleKnown\OfficialCopyTitleKnownV2_0WebService.wsdl" />
+    <None Include="Connected Services\OfficialCopyTitleKnown\RequestTitleKnownOfficialCopyV2_1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OfficialCopyTitleKnown\ResponseTitleKnownOfficialCopyV2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OutstandingRequests\Landmark.HmlrBg.ConnectedServices.OutstandingRequests.getOutstandingRequestsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OutstandingRequests\Landmark.HmlrBg.ConnectedServices.OutstandingRequests.ResponseOutstandingRequestsType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OutstandingRequests\OutstandingRequestsV2_1WebService.wsdl" />
+    <None Include="Connected Services\OutstandingRequests\OutstandingRequestsV2_1WebService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OutstandingRequests\OutstandingRequestsV2_1WebService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OwnershipVerification\Landmark.HmlrBg.ConnectedServices.OwnershipVerification.getResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OwnershipVerification\Landmark.HmlrBg.ConnectedServices.OwnershipVerification.ResponseOnlineOwnershipVerificationType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OwnershipVerification\Landmark.HmlrBg.ConnectedServices.OwnershipVerification.verifyOwnershipResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OwnershipVerification\OnlineOwnershipVerificationV1_0WebService.wsdl" />
+    <None Include="Connected Services\OwnershipVerification\PollRequest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OwnershipVerification\RequestOnlineOwnershipVerificationV1_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OwnershipVerification\ResponseOnlineOwnershipVerificationV1_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RegisterExtractPoll\Landmark.HmlrBg.ConnectedServices.RegisterExtractPoll.getResponseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RegisterExtractPoll\Landmark.HmlrBg.ConnectedServices.RegisterExtractPoll.ResponseOCWithSummaryV2_1Type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RegisterExtractPoll\OfficialCopyWithSummaryV2_1PollRequestWebService.wsdl" />
+    <None Include="Connected Services\RegisterExtractPoll\PollRequest.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RegisterExtractPoll\ResponseOCWithSummaryV2_1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RegisterExtract\Landmark.HmlrBg.ConnectedServices.RegisterExtract.performOCWithSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RegisterExtract\Landmark.HmlrBg.ConnectedServices.RegisterExtract.ResponseOCWithSummaryV2_1Type.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RegisterExtract\OfficialCopyWithSummaryV2_1WebService.wsdl" />
+    <None Include="Connected Services\RegisterExtract\RequestOCWithSummaryV2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RegisterExtract\ResponseOCWithSummaryV2_1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\EDRSAttachmentPoll\" />
+    <WCFMetadataStorage Include="Connected Services\EDRSAttachment\" />
+    <WCFMetadataStorage Include="Connected Services\EDRSEarlyCompletionPoll\" />
+    <WCFMetadataStorage Include="Connected Services\EDRSRequisitionPoll\" />
+    <WCFMetadataStorage Include="Connected Services\EDRSSubmitPoll\" />
+    <WCFMetadataStorage Include="Connected Services\EDRSSubmit\" />
+    <WCFMetadataStorage Include="Connected Services\LocalLandCharges\" />
+    <WCFMetadataStorage Include="Connected Services\OfficialCopyTitleKnownPoll\" />
+    <WCFMetadataStorage Include="Connected Services\OfficialCopyTitleKnown\" />
+    <WCFMetadataStorage Include="Connected Services\OutstandingRequests\" />
+    <WCFMetadataStorage Include="Connected Services\OwnershipVerification\" />
+    <WCFMetadataStorage Include="Connected Services\RegisterExtractPoll\" />
+    <WCFMetadataStorage Include="Connected Services\RegisterExtract\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LocalLandCharges\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LocalLandCharges\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LocalLandCharges\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RegisterExtract\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RegisterExtract\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RegisterExtract\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OwnershipVerification\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OwnershipVerification\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OwnershipVerification\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OfficialCopyTitleKnown\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OfficialCopyTitleKnown\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OfficialCopyTitleKnown\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OfficialCopyTitleKnownPoll\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OfficialCopyTitleKnownPoll\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OfficialCopyTitleKnownPoll\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSSubmit\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSSubmit\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSSubmit\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSSubmitPoll\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSSubmitPoll\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSSubmitPoll\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSAttachment\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSAttachment\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSAttachment\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSAttachmentPoll\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSAttachmentPoll\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSAttachmentPoll\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OutstandingRequests\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OutstandingRequests\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OutstandingRequests\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSEarlyCompletionPoll\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSEarlyCompletionPoll\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSEarlyCompletionPoll\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSRequisitionPoll\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSRequisitionPoll\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\EDRSRequisitionPoll\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Net.Http">
+      <Version>4.3.4</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
