@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>net.zetasafe.zms</groupId>
+	<artifactId>data</artifactId>
+	<version>1.0.3</version>
+	<packaging>jar</packaging>
+
+	<name>zs21_zms_data</name>
+	<description>Data micro service</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.4.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+		   	<groupId>org.springframework.boot</groupId>
+		   	<artifactId>spring-boot-starter-actuator</artifactId>
+	   </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+	   <dependency>
+	      <groupId>com.papertrailapp</groupId>
+	      <artifactId>logback-syslog4j</artifactId>
+	      <version>1.0.0</version>
+	    </dependency> 
+	    <dependency>
+	      <groupId>io.jsonwebtoken</groupId>
+	      <artifactId>jjwt</artifactId>
+	      <version>0.6.0</version>
+	   </dependency>
+	   <dependency>
+		    <groupId>com.microsoft.azure</groupId>
+		    <artifactId>azure-servicebus</artifactId>
+		    <version>1.2.11</version>
+		</dependency>
+	      <dependency>
+		    <groupId>com.microsoft.azure</groupId>
+		    <artifactId>azure-documentdb</artifactId>
+		    <version>2.1.1</version>
+		</dependency>
+	      <dependency>
+	      	<groupId>org.springframework.data</groupId>
+	      	<artifactId>spring-data-mongodb</artifactId>
+	      </dependency>
+	      <dependency>
+	      	<groupId>io.lettuce</groupId>
+	      	<artifactId>lettuce-core</artifactId>
+	      	</dependency>
+	      	<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jdbc</artifactId>
+		</dependency>
+	</dependencies>
+	
+	<build>
+	    <plugins>
+	        <plugin>
+	            <groupId>org.springframework.boot</groupId>
+	            <artifactId>spring-boot-maven-plugin</artifactId>
+	            <executions>
+	                <execution>
+	                    <goals>
+	                        <goal>build-info</goal>
+	                    </goals>
+	                </execution>
+	            </executions>
+	        </plugin>
+	    </plugins>
+	    <finalName>${project.artifactId}</finalName>
+	</build>
+	
+	<repositories>
+	   <repository>
+	      <id>MyGet</id>
+	      <url>https://www.myget.org/F/zetasafe/maven/</url>
+	   </repository>
+	</repositories>
+
+</project>
